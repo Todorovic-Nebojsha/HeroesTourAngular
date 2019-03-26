@@ -1,3 +1,10 @@
 <h1>{{title}}</h1>
-<app-heroes (selected)="onSelected($event)" [selectedHero]='selectedHero'></app-heroes>
-<app-hero-detail *ngIf='selectedHero' [hero]='selectedHero' ></app-hero-detail>
+<nav>
+  <a routerLink='/heroes'>Heroes</a>
+  <a routerLink='/dashboard'>Dashboard</a>
+</nav>
+<router-outlet>
+</router-outlet>
+
+
+<app-messages [messages]="messages" (clear)="onClear()"></app-messages>
