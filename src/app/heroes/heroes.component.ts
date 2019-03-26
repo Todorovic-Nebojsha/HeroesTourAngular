@@ -16,7 +16,7 @@ export class HeroesComponent implements OnInit {
     };
 
     @Output() selected = new EventEmitter<Hero>();
-    @Input() selectedHero = Hero;
+   
 
     heroes: Hero[]=[];
 
